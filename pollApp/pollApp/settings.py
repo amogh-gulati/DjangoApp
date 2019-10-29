@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print("this is the base dir",BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,11 +55,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'pollApp.urls'
-
+print("this is base dir",os.path.join(BASE_DIR,'templates'))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #giving the global template path
+        'DIRS': [os.path.join(BASE_DIR,'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
