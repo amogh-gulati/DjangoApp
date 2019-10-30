@@ -20,5 +20,7 @@ urlpatterns = [
     path('polls/',include('polls.urls')),
     #as soon as we go to /polls/anthing the
     #we would look in the file polls.url
+    path('',include('pages.urls')),
     path('admin/', admin.site.urls),
+
 ]
